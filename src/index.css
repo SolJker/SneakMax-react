@@ -1,0 +1,319 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+ul{
+  list-style: none;
+}
+
+header{
+  background: #484283;
+}
+
+header > div{
+  display: flex;
+  align-items: center;
+  margin-right: 100px;
+  margin-left: 100px;
+  padding: 20px 0;
+  border-bottom: 1px solid #FFFFFF80;
+}
+
+header ul{
+  display: flex;
+}
+
+header ul li{
+  color: white;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+}
+
+header ul li:not(:last-child){
+  margin-right: 40px;
+}
+
+.header_heading{
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 700;
+  color: white;
+  margin-right: auto;
+  text-align: start;
+}
+
+.li_cart{
+  margin-right: 12px;
+}
+
+/* Hero */
+
+.hero{
+  background: #484283;
+  padding: 100px 0;
+  height: 200px;
+}
+
+.hero > div{
+  margin: 0 100px;
+  position: relative;
+  display: flex;
+}
+
+.hero > div::after{
+  content: 'Кроссовки известных брендов с доставкой по России и СНГ';
+  color: white;
+  font-size: 36px;
+  line-height: 50px;
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 49%;
+  text-align: left;
+}
+
+.hero > div::before{
+  content: 'Мы продаем кроссовки брендов Nike, Adidas, Puma, Reebok, Converse и многие другие по низким ценам';
+  color: white;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 400;
+  position: absolute;
+  top: 120px;
+  left: 0;
+  width: 46%;
+  text-align: left;
+}
+
+.hero button{
+  position: absolute;
+  top: 200px;
+  padding: 20px 40px;
+  background-color: #F14F4F;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.bg_sneak{
+  font-size: 170px;
+  color: #FFFFFF1F;
+  position: absolute;
+  left: 145px;
+  top: 40px;
+  z-index: 4;
+  font-weight: 700;
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Item */
+
+.item{
+  text-align: left;
+  position: relative;
+}
+
+.item:hover svg{
+  visibility: visible;
+}
+
+.item svg{
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.item .svg_eye{
+  position: absolute;
+  left: 50px;
+  top: 110px;
+  background-color: #444B58;
+  padding: 20px;
+  border-radius: 50%;
+}
+
+.item .svg_cart{
+  position: absolute;
+  right: 50px;
+  top: 110px;
+  background-color: #444B58;
+  padding: 20px;
+  border-radius: 50%;
+}
+
+.item:not(:last-child){
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.item img{
+  width: 280px;
+  height: 280px;
+}
+
+.item h2{
+  font-size: 16px;
+  line-height: 16px;
+  color: #444B58;
+}
+
+.item b{
+  font-size: 20px;
+  color: #444B58;
+}
+
+/* Items */
+
+.items{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  margin: 0 100px;
+  margin-top: 130px;
+  padding-bottom: 90px;
+}
+
+.items::after{
+  content: 'Контент';
+  position: absolute;
+  top: -50px;
+  left: 80px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #444B58;
+}
+
+.items button{
+  position: absolute;
+  bottom: 0;
+  padding: 20px 40px;
+  background-color: #F14F4F;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Cart */
+
+.cart{
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  width: 40%;
+  background-color: white;
+  z-index: 9999;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart .order{
+  width: 100%;
+  text-align: left;
+}
+
+.cart .order img{
+  width: 90px;
+  height: 90px;
+  float: left;
+  margin-right: 20px;
+}
+
+.order h2{
+  font-size: 16px;
+  line-height: 16px;
+  color: #444B58;
+}
+
+.order b{
+  font-size: 20px;
+  color: #444B58;
+}
+
+.active{
+  visibility: visible;
+}
+
+.del_orders{
+  float: right;
+  visibility: visible;
+  cursor: pointer;
+}
+
+.summa{
+  margin-top: 30px;
+  text-align: start;
+  font-size: 20px;
+}
+
+/* Full Item */
+
+.full_item{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000000c0;
+  z-index: 1000000;
+}
+
+.full_item img{
+  width: 500px;
+  height: 500px;
+  margin-left: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-right: 25px;
+}
+
+.full_item_desc{
+  background-color: white;
+  margin: 150px;
+  display: flex;
+}
+
+.full_item_text{
+  width: 40%;
+  margin-right: 40px;
+  margin-top: 40px;
+  text-align: left;
+}
+
+.full_item_text h2{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.full_item_text b{
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.add_item{
+  margin-top: 50px;
+  text-align: center;
+  color: white;
+  background-color: #F14F4F;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.close_item{
+  margin-left: 340px;
+  margin-bottom: 15px;
+}
